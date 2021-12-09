@@ -2,10 +2,13 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.foto {
+  display: flex;
+  justify-content: center;
+  background-color: #f6e1c58a;
 }
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -32,6 +35,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

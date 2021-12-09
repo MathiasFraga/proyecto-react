@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import NavBar from './components/NavBar/navBar';
+import ItemDetailContainer from './container/ItemDetailContainer/ItemDetailContainer';
+import ListContainer from './container/ItemListContainer/ItemListContainer';
+import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import  CartState  from './context/cart/CartState'
+import  Cart  from './components/CartDetails/cart'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
+    <CartState>
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route exact path="/" element ={<ListContainer greeting="Camara Estudio" />} />
+          <Route exact path="/categoria/:categoryID" element ={<ListContainer greeting="Cursos y servicios de Fotografia" />}/>
+          <Route exact path="/item/:itemID" element = {<ItemDetailContainer />} />
+          <Route exact path="/cart" element = {<Cart />} />
+          <Route path="/*" element = {<h1>Página no encontrada</h1>} />
+        </Routes>
+      </BrowserRouter>
+      </CartState>
+    );
+  }
 export default App;
+
