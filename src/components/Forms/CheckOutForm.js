@@ -8,7 +8,6 @@ import {
 import { getFirestore } from "../../firebase/index";
 
 
-
 export const CheckOutForm = ({ finalPurchase, totalCompra, HandleDeleteCart }) => {
 
     const [buyer, setBuyer] = useState({

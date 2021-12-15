@@ -9,7 +9,6 @@ function ItemDetailContainer() {
 	const [cursos, setCursos] = useState([]);
 	const{ itemID } = useParams();
 
-
 	useEffect(() => {
 		const db = getFirestore();
 		const theItem = doc(db, 'items', itemID);

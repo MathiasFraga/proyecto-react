@@ -28,7 +28,7 @@ const Item = ({curso}) =>{
     
     return(
         <Card key={curso.id} style={{ width: "18rem"}}>
-            <Link to={`/item/${curso.id}`}>
+            <Link to={`/item/${curso.category}`}>
                 <Card.Img variant="top" src={curso.foto} style={{maxHeight: "200px"}}/>
             </Link>
             <Card.Body style={{height:"20rem", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"space-around"}}>
