@@ -5,7 +5,7 @@ import CartWidget from "../CartWidget/cartWidget";
 const NavBar = () => {
   return (
     <nav className="nav navbar navbar-expand-lg navbar-dark ">
-      <div class="container-fluid containerTitle">
+      <div className="container-fluid containerTitle">
         <h3>Camara Estudio</h3>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
